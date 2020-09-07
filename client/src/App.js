@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import NavBar from './components/layout/NavBar';
+import Movies from './components/movies/Movies';
+import Search from './components/movies/Search';
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+
+  state = {
+    movies: {},
+    loading: false
+  }
+
+  async componentDidMount() {
+    this.setState({ loading: true })
+
+    const res = await axios.get('http://www.omdbapi.com/?i=tt3896198&apikey=f52ad4e6')
+    
+    this.setState({ movies: res.data, loading: false })
+
+    console.log(res.data)
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <NavBar title='Shoppies' />
+        <Search />
+        <Movies loading={this.state.loading} movies={this.state.movies} />
+        {/* <MovieItem /> */}
+      </div>
+    );
+  }
+
 }
 
 export default App;

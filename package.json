@@ -13,6 +13,7 @@
   "author": "Dominique Maack",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.20.0",
     "concurrently": "^5.3.0",
     "nodemon": "^2.0.4"
   }
