@@ -17,7 +17,7 @@ const ShoppiesState = props => {
     const searchMovies = async (text) => {
         setLoading()
     
-        const res = await axios.get(`http://www.omdbapi.com/?apikey=f52ad4e6&s=${text}&type=movie`)
+        const res = await axios.get(`https://www.omdbapi.com/?apikey=f52ad4e6&s=${text}&type=movie`)
         console.log('response from search', res)
         console.log('text from search', text)
     
@@ -31,7 +31,7 @@ const ShoppiesState = props => {
     const getMovie = async (imdbID) => {
         setLoading()
 
-        const res = await axios.get(`http://www.omdbapi.com/?apikey=f52ad4e6&i=${imdbID}&type=movie`)
+        const res = await axios.get(`https://www.omdbapi.com/?apikey=f52ad4e6&i=${imdbID}&type=movie`)
         console.log('response from get movie', res)
         
         dispatch({

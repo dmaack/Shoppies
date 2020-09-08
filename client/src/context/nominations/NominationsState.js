@@ -28,7 +28,7 @@ const getNominations = async () => {
         const res = await axios.get('/api/nominations')
 
         Promise.all(res.data.map(async nomination => {
-            let res = await axios.get(`http://www.omdbapi.com/?apikey=f52ad4e6&i=${nomination.imdbID}&type=movie`)
+            let res = await axios.get(`https://www.omdbapi.com/?apikey=f52ad4e6&i=${nomination.imdbID}&type=movie`)
             res.data.id = nomination._id
             return res.data
                 // .then(res => {
