@@ -17,7 +17,7 @@ const Nominations = () => {
         return <Spinner />
     } else {
         return (
-            <div>
+            <div className='container'>
               {nominations.map(nomination => (
                   <NominationItem key={nomination.imdbID} nomination={nomination} /> 
               ))}

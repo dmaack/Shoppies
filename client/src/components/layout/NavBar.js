@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 const NavBar = (props) => {
 
         return (
-            <nav>
-                <h1>{props.title}</h1>
+            <nav class='nav'>
+                <h1 className='app-title'>{props.title}</h1>
 
-                <ul>
+                <div className='container'>
+                <ul className='navLinks'>
                     <li>
                         <Link to='/'>Home</Link>
                     </li>
@@ -19,6 +20,7 @@ const NavBar = (props) => {
                     </li>
                     
                 </ul>
+                </div>
             </nav>
         )
 

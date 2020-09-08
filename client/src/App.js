@@ -21,16 +21,15 @@ const App = () => {
 
           <div className="App">
             <NavBar title='Shoppies' />
-        
-
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/nominations' component={Nominations} />
-              <Route exact path ='/about' component={About} />
-              <Route exact path='/movie/:imdbID' component={Movie} />
-              <Route component={ErrorNotFound} />
-            </Switch>
-
+            <div className='left-content'>
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/nominations' component={Nominations} />
+                <Route exact path ='/about' component={About} />
+                <Route exact path='/movie/:imdbID' component={Movie} />
+                <Route component={ErrorNotFound} />
+              </Switch>
+            </div>
           </div>      
         </Router>
         </NominationState>

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import NominationsContext from '../../context/nominations/nominationsContext';
 
-const NominationItem = ({ nomination: { Poster, Title, Year, id}}) => {
+const NominationItem = ({ nomination: { Poster, Title, Year, Genre, Plot, id}}) => {
     const nominationsContext = useContext(NominationsContext)
     const { removeNomination } = nominationsContext;
 
@@ -9,17 +9,27 @@ const NominationItem = ({ nomination: { Poster, Title, Year, id}}) => {
         removeNomination(id)
     }
     return (
-        <div>
+        <div className='nominationItem'>
+            <div className='nomination-img'>
                 <img 
                     src={Poster}
                     alt='movie poster'
                     className='movie-poster'
-                    style={{width: '60px'}} />
-                <h1>{Title}</h1>
-                <h2>{Year}</h2>
-                <div>
-                    <button onClick={handleClick}>Remove Nomination</button>
+                />
+            </div>
+        
+            <div className='nomination-details'>
+                <div className='nomination-content'>
+                    <h1 className='nomination-title'>{Title}</h1>
+                    <p>{Year}</p>
+                    <p>{Genre}</p>
+                    <p>{Plot}</p>
                 </div>
+                <div>
+                    <button onClick={handleClick} className='remove-btn'>Remove</button>
+                </div>
+            
+            </div>
         </div>
     )
 }

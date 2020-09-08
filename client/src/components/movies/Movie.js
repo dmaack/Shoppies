@@ -18,16 +18,16 @@ const Movie = (props) => {
 
     return (
         <Fragment>
-            <Link to='/'>Back To Search</Link>
-            <div>
-                <img src={Poster} alt='movie poster' />
-                <h1>{Title}</h1>
-                <p>{Year}</p>
-                <p>{Genre}</p>
-                <p>{imdbRating}</p>
-                <p>{Actors}</p>
-                <p>{Director}</p>
-                <p>{Plot}</p>
+            <Link to='/' className='back-btn'>Back To Search</Link>
+            <div className='container'>
+                <img src={Poster} alt='movie poster' className='movie-img' />
+                <h1 className='movie-title'>{Title}</h1>
+                <p className='movie-year'>{Year}</p>
+                <p className='movie-genre'>{Genre}</p>
+                <p className='movie-rating'>IMDB Rating: {imdbRating}</p>
+                <p className='movie-actors'>Actors: {Actors}</p>
+                <p className='movie-director'>Director: {Director}</p>
+                <p className='movie-plot'>Plot: {Plot}</p>
             </div>
         </Fragment>
     )

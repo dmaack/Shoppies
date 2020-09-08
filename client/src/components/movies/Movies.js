@@ -16,7 +16,7 @@ const Movies = () => {
         return <Spinner />
     } else {
         return (
-            <div>
+            <div className='grid-4'>
                 {movies.map(movie => (
                     <MovieItem key={movie.id} movie={movie} /> 
                 ))}

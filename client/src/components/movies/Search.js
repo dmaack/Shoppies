@@ -17,7 +17,7 @@ const Search = () => {
     }
 
     return (
-        <div>
+        <div className='searchBar'>
             <form onSubmit={onSubmit}>
                 <input 
                     type='text' 
@@ -25,11 +25,12 @@ const Search = () => {
                     value={text}
                     placeholder='Search...'
                     onChange={onChange} 
+                    className='searchInput'
                     />
-                <input 
+                {/* <input 
                     type='submit' 
                     value='Search' 
-                    />
+                    /> */}
             </form>
 
             {/* Might put in a clear button option */}

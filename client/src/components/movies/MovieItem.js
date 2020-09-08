@@ -16,17 +16,17 @@ const MovieItem = (props) => {
     }
 
         return (
-            <div>
+            <div className='container movieItem'>
                 <img 
                     src={Poster}
                     alt='movie poster'
                     className='movie-poster'
-                    style={{width: '60px'}} />
-                <h1>{Title}</h1>
-                <h2>{Year}</h2>
-                <div>
-                    <Link to={`/movie/${imdbID}`}>Details</Link>
-                    <button onClick={handleClick}>Nominate Movie</button>
+                     />
+                <h1 className='movie-item-title'>{Title}</h1>
+                <p className='movie-item-year'>{Year}</p>
+                <div className='movie-btn-container'>
+                    <Link to={`/movie/${imdbID}`} className='movie-details'>Details</Link>
+                    <button onClick={handleClick} className='nominate-btn'>Nominate Movie</button>
                 </div>
                 
 
