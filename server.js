@@ -9,7 +9,7 @@ connectDB();
 
 app.use(express.json({ extended: false }))
 
-app.get('/', (req, res) => res.json({ msg: 'Welcome to the Shoppies API'}))
+// app.get('/', (req, res) => res.json({ msg: 'Welcome to the Shoppies API'}))
 
 // Routes
 app.use('/api/nominations', require('./routes/nominations'));
