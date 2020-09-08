@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import MovieItem from './MovieItem';
 import Spinner from '../layout/Spinner';
 import PropTypes from 'prop-types';
+import ShoppiesContext from '../../context/shoppies/shoppiesContext';
 
 
-const Movies = ({ movies, loading }) => {
+
+const Movies = () => {
+    const shoppiesContext = useContext(ShoppiesContext);
+
+    const { loading, movies } = shoppiesContext
+
+    console.log('movies in movies', shoppiesContext.movies)
 
     if (loading) {
         return <Spinner />
     } else {
         return (
             <div>
-                {/* {movies.map(movie => (
+                {movies.map(movie => (
                     <MovieItem key={movie.id} movie={movie} /> 
-                ))} */}
+                ))}
 
-             <MovieItem key={movies.id} movies={movies} />
+             {/* <MovieItem key={movies.id} movies={movies} /> */}
                
             </div>
         )
@@ -23,9 +30,6 @@ const Movies = ({ movies, loading }) => {
 
 }
 
-Movies.propTypes = {
-    movies: PropTypes.array.isRequired,
-    loading: PropTypes.bool.isRequired,
-}
+
 
 export default Movies;
