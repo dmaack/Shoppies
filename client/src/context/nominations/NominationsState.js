@@ -58,11 +58,13 @@ const addNomination = async imdbID => {
     try {
 
         const res = await axios.post('/api/nominations', {imdbID: imdbID})
+        console.log ('add res', res.data)
 
         dispatch({
             type: ADD_NOMINATION,
             payload: res.data
         })
+
 
     } catch (err) {
         dispatch({
@@ -70,6 +72,7 @@ const addNomination = async imdbID => {
             payload: err
         })
     }
+    console.log('add nomintion', state.nominations)
 }
 
 // Remove Nomination 

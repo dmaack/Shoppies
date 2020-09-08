@@ -1,11 +1,16 @@
 import React, { useEffect, useContext, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import ShoppiesContext from '../../context/shoppies/shoppiesContext';
+import NominationsContext from '../../context/nominations/nominationsContext';
+
 
 const Movie = (props) => {
     const shoppiesContext = useContext(ShoppiesContext);
+    const { getMovie, loading, movie } = shoppiesContext;
+
+    const nominationsContext = useContext(NominationsContext)
+    const { addNomination } = nominationsContext
     
-    const { getMovie, loading, movie, addNomination } = shoppiesContext;
 
     const { Title, Year, Genre, Director, Actors, Plot, Poster, imdbRating, imdbID } = movie;
     console.log('movie props in Movie.js', movie)

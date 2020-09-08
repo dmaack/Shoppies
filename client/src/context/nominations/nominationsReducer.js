@@ -17,7 +17,7 @@ export default (state, action) => {
         case ADD_NOMINATION:
             return {
                 ...state,
-                nominations: [action.payload, ...state.nominations],
+                // nominations: [action.payload, ...state.nominations],
                 loading: false,
                 nominationCount: state.nominationCount++
             }
