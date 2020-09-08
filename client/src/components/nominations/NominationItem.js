@@ -8,6 +8,7 @@ const NominationItem = ({ nomination: { Poster, Title, Year, Genre, Plot, id}}) 
     const handleClick = () => {
         removeNomination(id)
     }
+
     return (
         <div className='nominationItem'>
             <div className='nomination-img'>
@@ -21,9 +22,9 @@ const NominationItem = ({ nomination: { Poster, Title, Year, Genre, Plot, id}}) 
             <div className='nomination-details'>
                 <div className='nomination-content'>
                     <h1 className='nomination-title'>{Title}</h1>
-                    <p>{Year}</p>
-                    <p>{Genre}</p>
-                    <p>{Plot}</p>
+                    <p className='nomination-year'>{Year}</p>
+                    <p className='nomination-genre'>{Genre}</p>
+                    <p className='nomination-plot'>{Plot}</p>
                 </div>
                 <div>
                     <button onClick={handleClick} className='remove-btn'>Remove</button>

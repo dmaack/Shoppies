@@ -16,10 +16,15 @@ const Movies = () => {
         return <Spinner />
     } else {
         return (
-            <div className='grid-4'>
-                {movies.map(movie => (
-                    <MovieItem key={movie.id} movie={movie} /> 
-                ))}
+            <div>
+                <h1 className='search-movies-title'>Your Results</h1>
+            
+                <div className='grid-4'>
+                    
+                    {movies.map(movie => (
+                        <MovieItem key={movie.id} movie={movie} /> 
+                    ))}
+                </div>
             </div>
         )
     }

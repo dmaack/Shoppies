@@ -146,6 +146,11 @@ li {
     background: rgba(36, 36, 37, 0.9);
 }
 
+/* Movies.js */
+.search-movies-title {
+    padding: 1rem 2rem 0 2rem;
+}
+
 /* MovieItem */
 .movie-item-title {
     font-size: 1rem;
@@ -163,7 +168,7 @@ li {
 .movie-details {
     border-bottom: 1px solid #fff;
     margin-bottom: 15px;
-    width: 25%;
+    width: 30%;
 }
 
 .nominate-btn {
@@ -198,6 +203,10 @@ li {
 .nomination-title {
    font-size: 1.4rem;
 }
+
+.nomination-plot {
+    margin-top: 1rem;
+}
 .remove-btn {
     padding: .5rem;
     border: none;
@@ -209,9 +218,28 @@ li {
 
 
 /* Movie.js */
+
+.movie-card {
+    background: #242425;
+    margin-top: 2rem;
+    padding: 3rem;
+}
+
 .movie-img {
     width: 300px;
     margin-top: 2rem;
+}
+
+.movie-plot{
+    margin: 1rem 0;
+}
+
+.imdb-rating {
+    color: #f5c618;
+}
+
+strong {
+    margin-right: 5px;
 }
 
 .back-btn-container {
@@ -230,6 +258,16 @@ li {
     color: #fff;
 }
 
-.fas {
+.fa-film, .fa-list {
     margin-right: 10px;
+}
+
+.fa-star {
+    color: #f5c618; 
+    margin-right: 0;
+}
+
+.fa-arrow-left {
+    color: var(--dark-color);
+    margin-right: 5px;
 }
