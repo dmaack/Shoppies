@@ -5,7 +5,7 @@ const MovieItem = (props) => {
 
     const { Title, Year, Poster, imdbID  } = props.movie;
 
-    console.log('props in movieItem', props.movie)
+    console.log('props in MovieItem.js', props.movie)
 
         return (
             <div>

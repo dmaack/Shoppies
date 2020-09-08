@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react';
-import PropTypes from 'prop-types';
 import ShoppiesContext from '../../context/shoppies/shoppiesContext';
 
 
-const Search = (props) => {
+const Search = () => {
     const shoppiesContext = useContext(ShoppiesContext);
     const [text, setText] = useState('')
 
@@ -38,8 +37,5 @@ const Search = (props) => {
     )
 }
 
-Search.propTypes = {  
-    
-}
 
 export default Search;
