@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const NominationSchema = mongoose.Schema({
     imdbID: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     date: {
         type: Date,
