@@ -9,8 +9,6 @@ const MovieItem = (props) => {
 
     const { Title, Year, Poster, imdbID  } = props.movie;
 
-    console.log('props in MovieItem.js', props.movie)
-
     const handleClick = () => {
         addNomination(imdbID)
     }
@@ -26,7 +24,7 @@ const MovieItem = (props) => {
                 <p className='movie-item-year'>{Year}</p>
                 <div className='movie-btn-container'>
                     <Link to={`/movie/${imdbID}`} className='movie-details'>Details</Link>
-                    <button onClick={handleClick} className='nominate-btn'>Nominate Movie</button>
+                    <button onClick={handleClick} className='btn'>Nominate Movie</button>
                 </div>
                 
 

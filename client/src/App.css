@@ -49,6 +49,24 @@
     padding: 0 2rem;
   }
 
+  .btn {
+    display: inline-block;
+    background: #fff;
+    color: var(--dark-color);
+    padding: 0.8rem 1.3rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: opacity 0.2s ease-in;
+    outline: none;
+  }
+
+  .btn:hover {
+    background: rgba(152, 40, 37, 0.85);
+    color: #fff;
+  }
+
 /* Grid */
 .grid-2 {
     display: grid;
@@ -76,10 +94,13 @@
 
 .App {
     display: flex;
+    background: #fff;
 }
 
 .nav {
-    border-right: 1px solid var(--primary-color);
+    background: rgba(36, 36, 37, 0.85);
+    box-shadow: 7px 4px 9px rgba(0, 0, 0, 0.25);
+    /* border-right: 1px solid var(--primary-color); */
     height: 200vh;
 }
 
@@ -89,6 +110,7 @@
 
 li {
     padding-top: .5rem;
+    font-size: 1.2rem;
 }
 
 
@@ -102,23 +124,26 @@ li {
 .searchBar {
     border-bottom: 1px solid var(--primary-color);
     padding-bottom: .5rem;
+    /* background: rgba(36, 36, 37, 0.9); */
     
     
 }
 
 .searchInput {
     padding: 2.5rem 2rem 2rem 2rem;
-    background: var(--dark-color);
+    background: rgb(57 57 58);
     color: var(--light-color);
     border: none;
     font-size: 30px;
     text-align: center;
     display: block;
     margin: 0 auto;
+    width: 100%;
 }
 
 .left-content {
     width: 100vw;
+    background: rgba(36, 36, 37, 0.9);
 }
 
 /* MovieItem */
@@ -154,7 +179,7 @@ li {
 .nominationItem {
     display: flex;
     justify-content: space-between;
-    background-color: #2f3535;
+    background: #242425;
     margin-top: 1.5rem;
     padding: 1rem;
 }
@@ -182,9 +207,16 @@ li {
     color: #fff;
 }
 
+
+/* Movie.js */
 .movie-img {
     width: 300px;
     margin-top: 2rem;
+}
+
+.back-btn-container {
+    margin-top: 2rem;
+    margin-left: 1rem;
 }
 
 .back-btn {
@@ -192,14 +224,12 @@ li {
     border: none;
     background-color: #fff;
     color: var(--dark-color);
-    margin-top: 2rem;
 }
 .back-btn:hover {
     background: rgba(152, 40, 37, 0.85);
     color: #fff;
 }
 
-/* todo: 
-deploy
-alerts
-apply */
+.fas {
+    margin-right: 10px;
+}

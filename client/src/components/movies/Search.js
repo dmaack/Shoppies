@@ -27,10 +27,6 @@ const Search = () => {
                     onChange={onChange} 
                     className='searchInput'
                     />
-                {/* <input 
-                    type='submit' 
-                    value='Search' 
-                    /> */}
             </form>
 
             {/* Might put in a clear button option */}

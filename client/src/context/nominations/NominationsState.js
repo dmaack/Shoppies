@@ -14,7 +14,8 @@ const NominationState = props => {
     const initialState = {
         nominations: [],
         error: null,
-        loading: false
+        loading: false,
+        nominationCount: 0
     }
 
 
@@ -31,11 +32,6 @@ const getNominations = async () => {
             let res = await axios.get(`https://www.omdbapi.com/?apikey=f52ad4e6&i=${nomination.imdbID}&type=movie`)
             res.data.id = nomination._id
             return res.data
-                // .then(res => {
-                //     console.log('res in then', res)
-                //     return res.data
-                // })
-                // .catch(err => console.log(err))
         }))
             .then((values) => {
                 console.log('values',values)
@@ -60,6 +56,7 @@ const getNominations = async () => {
 // Add Nomination 
 const addNomination = async imdbID => {
     try {
+
         const res = await axios.post('/api/nominations', {imdbID: imdbID})
 
         dispatch({
@@ -104,6 +101,7 @@ const removeNomination = async id => {
             value={{
                 nominations: state.nominations,
                 error: state.error,
+                nominationCount: state.nominationCount,
                 getNominations,
                 addNomination,
                 removeNomination
