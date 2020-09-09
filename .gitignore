@@ -1,8 +1,11 @@
 # Local Netlify folder
 .netlify
 
-default.json
 
-production.json
+
+
 
 node_modules
+
+config/production.json
+config/default.json
