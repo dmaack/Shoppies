@@ -95,13 +95,14 @@
 
 .App {
     display: flex;
-    background: #fff;
-    height: 150vh;
+    /* background: #fff; */
+    height: 100%;
+    background: rgba(36, 36, 37, 0.85);
 }
 
 .nav {
     position: fixed;
-    background: rgba(36, 36, 37, 0.85);
+    /* background: rgba(36, 36, 37, 0.85); */
     box-shadow: 7px 4px 9px rgba(0, 0, 0, 0.25);
     /* border-right: 1px solid var(--primary-color); */
     height: 100vh;
@@ -136,7 +137,8 @@ li {
 .searchInput {
     padding: 2.5rem 2rem 2rem 2rem;
     background: rgb(57 57 58);
-    color: var(--light-color);
+    /* color: var(--light-color); */
+    color: #fff;
     border: none;
     font-size: 30px;
     text-align: center;
@@ -145,10 +147,14 @@ li {
     width: 100%;
 }
 
+.searchInput::placeholder {
+    color: var(--light-color);
+}
+
 .left-content {
     width: 100vw;
     margin-left: 326px;
-    background: rgba(36, 36, 37, 0.9);
+    /* background: rgba(36, 36, 37, 0.9); */
     padding-bottom: 10rem;
 }
 
